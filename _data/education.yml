@@ -1,0 +1,15 @@
+# Degree
+- degree: Computer Engineering &bull;
+  uni: Texas A&M University
+  year: 2027
+  awards:
+    - award: 4.0 GPA &mdash; Dean's Honor Roll
+    - award: Engineering Honors Program
+  summary: 
+
+- degree: Relevant Courses
+  uni:  
+  awards:
+    - award: Introduction to Digital Systems Design (Spring 2024) &mdash; combinational and sequential digital design, created practical circuits from gates and latches (see Chores Tracker project)
+    - award: Computer Architecture and Design (Spring 2025) &mdash; register transfer languages, CPU organization, microprogramming, I/O and memory system architectures
+    - award: Other &mdash; Discrete Structures for Computing, Electrical Circuit Theory, Data Structures and Algorithms
