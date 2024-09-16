@@ -16,7 +16,7 @@ sass:
 #paginate: 5 # Expecting an integer here
 
 # Resume settings
-resume_avatar:                  "true"
+#resume_avatar:                  "true"
 resume_name:                    "Alexander Gaidarov"
 resume_title:                   "Computer Engineering Honors Student"
 
