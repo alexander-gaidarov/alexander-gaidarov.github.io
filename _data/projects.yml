@@ -1,0 +1,37 @@
+# Projects
+# uncomment the urls if you wish to display them, and add your own URL
+
+# Chores Tracker
+- project: 
+  role: Chores Tracker
+  duration: August 2024
+  # url: "#"
+  description: Designed a PCB for a custom circuit with two 2-bit counters and a debouncing circuit to track household chores indicated by LEDs that cycle through with button presses
+
+# Bulgarian Phonetic Transcription
+- project: 
+  role: Bulgarian Phonetic Transcription
+  duration: January 2024
+  # url: "https://github.com/alexander-gaidarov/bulgarian-phonetic-transcription"
+  description: Created a GitHub repository (bulgarian-phonetic-transcription) that transcribes Bulgarian text into the International Phonetic Alphabet (IPA), helping with pronunciation of Cyrillic characters
+
+# MAMA LED
+- project: 
+  role: MAMA LED
+  duration: May 2022
+  # url: "#"
+  description: Designed and soldered a circuit consisting of two bistable multivibrators made from capacitors, resistors, and transistors that turns on 4 LEDs consecutively which light up the letters M, A, M, A
+
+  # Handwritten Font
+- project: 
+  role: Handwritten Font
+  duration: August 2021
+  # url: "#"
+  description: Programmed a text-to-handwriting converter which outputs a printable document containing text that looks identical to my handwriting
+
+  # Alarm System
+- project: 
+  role: Alarm System
+  duration: June 2021
+  # url: "#"
+  description: Constructed a room security system using an Arduino microcontroller that activates an alarm and sprays intruder with water when door is opened

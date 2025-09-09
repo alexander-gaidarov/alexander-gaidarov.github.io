@@ -1,0 +1,16 @@
+# Jobs
+
+- company: Weatherford
+  position: Information Technology Intern
+  duration: Jun, 2025 &mdash; Aug, 2025
+  summary: Created an application that displays outages and maintenance across all company locations	<ul class="resume-item-list"><li>App distributed to entire company, providing visibility to 10,000+ employees regarding network status</li><li>Full-stack app development with automated real-time data delivery using Microsoft Power Platform</li>
+
+- company: Austin Community College
+  position: Supplemental Instruction Leader for Russian 1-4
+  duration: Jan, 2023 &mdash; May, 2025
+  summary: Helped college students learning Russian by holding study-group sessions proven to improve course completion rate by 11% and average grade by 0.5	<ul class="resume-item-list"><li>Explained course material, created group activities, and led partner exercises</li><li>Assisted professor during lectures by managing up to 10 students at a time on Zoom </li>
+
+- company: Aggies Create
+  position: Chief Embedded Systems Engineer
+  duration: Sep, 2024 &mdash; Dec, 2024
+  summary: Wrote code and designed electronics for a portable writing aid intended to assist disabled students

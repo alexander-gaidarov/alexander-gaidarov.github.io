@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body class="theme-{% if site.resume_theme %}{{ site.resume_theme }}{% endif %}">
+
+    <div id="navbox">
+    <nav class="navbar">
+        <ul>
+            <a href="index.html" id="resume"><li>Resume</li></a>
+            <a href="projects.html"><li>Projects</li></a>
+        </ul>
+    </nav>
+    </div>
+
+  <div class="wrapper" itemscope itemtype="http://schema.org/Person">
+    {{ content }}   <!--the actual content of whatever is being rendered-->
+  </div>
+</body>
+</html>
