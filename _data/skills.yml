@@ -3,14 +3,15 @@
 # Electronics
 - skill: Hardware
   description: <ul class="resume-item-list"><li>Hardware design, debugging, and verification in Verilog</li>
-    <li>Breadboard prototyping, soldering, PCB design, and KiCad</li>
+    <li>Breadboard prototyping, soldering, and PCB design</li>
     <li>Analysis with multimeters and oscilloscopes</li>
     <li>Proficient in reading and creating electrical schematics</li>
-    <li>Experience with microcontrollers and embedded systems</li>
+    <li>Experience with microcontrollers (Arduino, Raspberry Pi) and embedded systems</li>
+    <li>Software&colon; Cadence, Vivado, LTspice, and KiCad</li>
 
 # Programming
 - skill: Software
-  description: <ul class="resume-item-list"><li>Programming&colon; Java, Python, and C++</li>
+  description: <ul class="resume-item-list"><li>Programming&colon; Java, Python, C++, ARM assembly</li>
     <li>Web Development&colon; HTML and CSS</li>
     <li>Databases&colon; SQL and RDBMS (Relational Database Management System)</li>
     <li>Familiarity with Windows and Linux operating systems, as well as Git</li>
@@ -21,3 +22,4 @@
   description: <ul class="resume-item-list"><li>Fluent in English, Bulgarian, and Russian</li>
     <li>Microsoft Word, PowerPoint, and Excel (PivotTables, LOOKUP, SUMIF)</li>
     <li>Leadership and teaching experience</li>
+
