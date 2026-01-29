@@ -1,0 +1,221 @@
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+  background: #fff;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 728px;
+  padding: 0 24px;
+  margin: 0 auto;
+  zoom: 1;
+}
+
+.page-header {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.avatar {
+  width: 95px;
+  max-width: 100%;
+  border-radius: 100px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.header-name {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -.15rem;
+  margin: .7rem 0 0;
+  line-height: 1;
+}
+
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: -.05rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.header-contact-info p, .header-contact-info a {
+  color: #333;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: #efefef;
+  color: #333;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin: 0.7rem 0;
+  transition: all 0.2s;
+}
+
+.contact-button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.icon-links {
+  margin: 0.5rem 0 0 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.icon-links li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.icon-links li:last-child {
+  margin-right: 0;
+}
+
+.icon-links a {
+  color: #333;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+  transition: color 0.2s;
+}
+
+.icon-links a:hover {
+  color: #9c9c9c;
+  border-bottom: none;
+}
+
+.section-header {
+  border-top: 4px solid #c7c7c7;
+  border-bottom: 2px solid #c7c7c7;
+  padding: .2rem 0 .4rem;
+  margin: 1.5rem 0 1rem 0;
+}
+
+.section-header h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: -.05rem;
+}
+
+.content-section {
+  margin: 0 0 2rem 0;
+}
+
+.resume-item {
+  margin-bottom: 1.3rem;
+}
+
+.resume-item-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 .35rem;
+}
+
+.resume-item-details {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: .25rem;
+  font-style: italic;
+}
+
+.resume-item-copy, .resume-item-list {
+  margin: .4rem 0 0 1.2rem;
+  font-size: 1rem;
+}
+
+.resume-item-list {
+  padding-left: 1.2rem;
+}
+
+.page-footer {
+  border-top: 4px solid #c7c7c7;
+  padding-top: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+#navbox {
+  width: 130px;
+  background-color: silver;
+  position: fixed;
+  top: 0;
+  left: 10px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar li {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: -0.05rem;
+  color: black;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+.navbar li:hover {
+  background-color: #333;
+  color: white;
+  font-weight: 600;
+}
+
+
+.media-container{
+    display:flex;
+    justify-content:center;
+    margin:20px 0
+}
+
+.page-header .title-bar {
+    border-top: 4px solid #c7c7c7;
+    border-bottom: 2px solid #c7c7c7;
+    padding: .2rem 0 .4rem;
+    margin-top: 2rem;
+    padding: .4rem 0;
+}
+
+.page-header .title-bar .header-title {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.75rem;
+    line-height: 2rem;
+    letter-spacing: -.05rem;
+    text-align: center;
+    margin: 0 0 .5rem;
+}
+
+.footer-line {
+  font-size: .95rem;
+  color: #999;
+}
+@media (max-width: 800px) {
+  .wrapper {
+    padding: 0 6px;
+  }
+}
