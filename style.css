@@ -1,3 +1,9 @@
+/*Downloaded fonts*/
+@font-face {
+    font-family: Open Sans;     /*can rename if I want to*/
+    src: url(OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
@@ -35,6 +41,7 @@ body {
   line-height: 1;
 }
 
+/*
 .header-title {
   font-size: 1.1rem;
   font-weight: 300;
@@ -42,21 +49,32 @@ body {
   margin-bottom: 1rem;
   color: #444;
 }
+*/
 
-.header-contact-info p, .header-contact-info a {
+.header-title {
+      font-weight: 300;
+      font-size: 1.75rem;
+      line-height: 2rem;
+      letter-spacing: -.05rem;
+      text-align: center;
+      margin: 0 0 .5rem;
+}
+
+.header-contact-info p{
   color: #333;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
 .contact-button {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: inline-block;
   padding: 0.5rem 1.5rem;
   background: #efefef;
   color: #333;
   border-radius: 3px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin: 0.7rem 0;
   transition: all 0.2s;
 }
@@ -70,12 +88,14 @@ body {
   margin: 0.5rem 0 0 0;
   padding: 0;
   list-style: none;
-  text-align: center;
+  text-align: right;
+  margin-left: 30px;
+  display: flex;
 }
 
 .icon-links li {
-  display: inline;
-  margin-right: 10px;
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .icon-links li:last-child {
@@ -86,13 +106,15 @@ body {
   color: #333;
   font-weight: 700;
   text-decoration: none;
-  border-bottom: 1px solid #333;
+  /*border-bottom: 1px solid #333;*/
   transition: color 0.2s;
 }
 
 .icon-links a:hover {
-  color: #9c9c9c;
+  color: #c9181853;
   border-bottom: none;
+  fill: #db1414;
+  transition: all 0.2s ease;
 }
 
 .section-header {
@@ -100,13 +122,35 @@ body {
   border-bottom: 2px solid #c7c7c7;
   padding: .2rem 0 .4rem;
   margin: 1.5rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h1 {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-size: 1.75rem;
+    letter-spacing: -.05rem;
+    margin: 0;
 }
 
 .section-header h2 {
-  font-size: 1.3rem;
-  font-weight: 900;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px;
+  letter-spacing: -.05rem;
+  text-align: left;
+}
+
+.section-header h3 {
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 300;
   margin: 0;
   letter-spacing: -.05rem;
+  text-align: right;
 }
 
 .content-section {
@@ -118,16 +162,20 @@ body {
 }
 
 .resume-item-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin: 0 0 .35rem;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin: 0 0 .75rem;
+    font-size: 1.5rem;
+    letter-spacing: -.05rem;
+    line-height: 1;
 }
 
 .resume-item-details {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: .25rem;
-  font-style: italic;
+  font-family: "Lora", "Minion Pro", Palatino, Georgia, serif;
+  font-size: 1.125rem;
+  font-weight:600;
+  margin: 0 0 .75rem;
+  line-height: 1;
 }
 
 .resume-item-copy, .resume-item-list {
@@ -147,49 +195,82 @@ body {
   margin-bottom: 2rem;
 }
 
-#navbox {
-  width: 130px;
-  background-color: silver;
-  position: fixed;
-  top: 0;
-  left: 10px;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+#navbox{
+    width: 130px;
+    height: auto;
+    background-color: rgb(192, 192, 192);
+    position: fixed;
+    top:0px;
+    left: 10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+.navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.navbar a{
+    text-decoration: none;  
+    text-align: center;
+}
+.navbar li:hover{
+    background-color: #333;
+    color: white;
+    font-weight: 600;
+}
+.navbar li{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: -.05rem;
+    color: black;
+    
+    padding: 10px;
+    border-bottom: 2px solid black;
+}
+@media screen and (max-width:800px){    /*if screen is narrow (as in mobile devices)*/
+    #navbox{    /*these become stacked vertically*/
+        width: 100%;
+        position: sticky;
+    }
+  }
+
+/*Custom copied font code to use for project names*/
+#light-font {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-weight:bold;
+    font-size: 1.5rem;*/
+    line-height: 2rem;
+    letter-spacing: -.05rem;
+    color: black;
+    padding: 10px;
 }
 
-.navbar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+a:link{     /*pseudo-classes (denoted by ':') describe behavior when */
+    color: #333;       /*action is performed on element*/
+
+}
+a:visited{
+  color: #333;
+}
+a:hover{
+    color:#888;
+    border-bottom: none;
 }
 
-.navbar a {
-  text-decoration: none;
-  text-align: center;
+p{  /*doesn't match with my website*/
+  font-family: "Lora", "Minion Pro", Palatino, Georgia, serif;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-.navbar li {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  letter-spacing: -0.05rem;
-  color: black;
-  padding: 10px;
-  border-bottom: 2px solid black;
-}
-
-.navbar li:hover {
-  background-color: #333;
-  color: white;
-  font-weight: 600;
-}
-
-
-.media-container{
-    display:flex;
-    justify-content:center;
-    margin:20px 0
+.media-container {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  margin: 20px 0;          /* optional spacing */
 }
 
 .page-header .title-bar {
@@ -198,6 +279,8 @@ body {
     padding: .2rem 0 .4rem;
     margin-top: 2rem;
     padding: .4rem 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 .page-header .title-bar .header-title {
