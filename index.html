@@ -3,27 +3,53 @@
 <head>
   <meta charset="UTF-8">
   <title>Alexander Gaidarov</title>
-  <link rel="stylesheet" href="style.css">
+  <link id="page-style" rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="media/favicon.png" />
 </head>
 
+<header class="page-header">
 <div id="navbox">
     <nav class="navbar">
+      <div class="logo">
+        <a href="https://tamu.edu" target="_blank"><image src="media/tamu.png" class="logo-image"></image></a>
+      </div>
         <ul>
           <a href="index.html"><li>Start</li></a>  
           <a href="qualifications.html" id="resume"><li>Resume</li></a>
           <a href="portfolio.html"><li>Projects</li></a>
           <a href="service.html"><li>Service</li></a>
           <a href="genai.html"><li>Surprise</li></a>
-        </ul>
+        </ul>   
     </nav>
     </div>
+  <a href="" id="style-button">Switch Styles</a>
 
-    
+  <script>
+    const button = document.getElementById("style-button");
+  const theme = document.getElementById("page-style");
+
+  const styles = [
+    "style.css",
+    "style2.css"
+  ];
+
+  let current = localStorage.getItem("themeIndex") || 0;
+  theme.href = styles[current];
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();  // prevents navigation
+    current = (parseInt(current) + 1) % styles.length;
+
+    theme.href = styles[current];
+    localStorage.setItem("themeIndex", current);
+});
+  </script>
+
 <body>
   <div class="wrapper">
-    <header class="page-header">
-      <h1 class="header-name">Alexander Gaidarov</h1>
+    
+      <h1 class="header-name1">Alexander Gaidarov</h1>
+      <h1 class="header-name2">Howdy!</h1>
 
       <div class="title-bar no-print">
 
@@ -60,15 +86,28 @@
         </div>
 
       <div class="header-contact-info">
-        <p>
+        <p class="p1">
           I am a Computer Engineering student at Texas A&M University with hardware and software expereince, seeking a Summer 2026 internship.
         </p>
+        <p class="p2">
+          My name is Alexander Gaidarov, and I am a junior Computer Engineering student at the great institution of Texas A&M University. But more importantly, I am the loudest and the proudest member of the Fightin' Texas Aggie Class of 2027!
+        </p>
+
         <a href="mailto:alexander.gaidarov@tamu.edu" class="contact-button">Contact me</a>
       </div>
 
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/alexander-gaidarov/" target="_blank"><img width="50" src="media/linkedin.png"></img></a>
+        <a href="https://github.com/alexander-gaidarov" target="_blank"><img width="37" src="media/github.png"></img></a>
+      </div>
+
       <div class="media-container">
-      <img width="400" src="media/Gaidarov,Alexander.jpg"></img>
-    </div> 
+        <img width="400" src="media/Gaidarov,Alexander.jpg"></img>
+      <div class="small-pictures">
+        <img src="media/IMG_1636.JPG"></img>
+        <img src="media/IMG_0147.JPG"></img>
+      </div>
+      </div> 
 
       </header>
       </div>

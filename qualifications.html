@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Alexander Gaidarov - Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <link id="page-style" rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="media/favicon.png" />
 </head>
 
-<div id="navbox">
+<header class="page-header">
+  <div id="navbox">
     <nav class="navbar">
+      <div class="logo">
+        <a href="https://tamu.edu" target="_blank"><image src="media/tamu.png" class="logo-image"></image></a>
+      </div>
         <ul>
           <a href="index.html"><li>Start</li></a>  
           <a href="qualifications.html" id="resume"><li>Resume</li></a>
@@ -18,15 +22,42 @@
         </ul>
     </nav>
     </div>
+    <a href="" id="style-button">Switch Styles</a>
+</header>
+
+  <script>
+    const button = document.getElementById("style-button");
+  const theme = document.getElementById("page-style");
+
+  const styles = [
+    "style.css",
+    "style2.css"
+  ];
+
+  let current = localStorage.getItem("themeIndex") || 0;
+  theme.href = styles[current];
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();  // prevents navigation
+    current = (parseInt(current) + 1) % styles.length;
+
+    theme.href = styles[current];
+    localStorage.setItem("themeIndex", current);
+});
+  </script>
+  
 
 <body>
   <div class="wrapper">
-    <header class="page-header">
+
       <h1 class="header-name">Resume</h1>
-    </header>
   <br>  
 <div class="resume-item-copy">My primary technical interests lie at the intersection of embedded systems, digital hardware design, and software engineering, where low-level circuitry and high-level code work together to create efficient, real-world solutions. I am especially drawn to building systems that integrate hardware and software, such as microcontroller-based devices or full-stack tools, because they require both careful resource management and thoughtful user-focused design. This combination appeals to me because it challenges me to think holistically about performance, reliability, and usability rather than treating hardware and software as separate domains.</div>
       <br>
+
+    <iframe src="Resume.pdf" width="100%" height="1050px" style="border: none;" title="Embedded PDF Viewer">
+    </iframe>
+
     <section class="content-section">
       <div class="section-header"><h1>Education</h1></div>
       <div class="resume-item">

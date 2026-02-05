@@ -1,7 +1,7 @@
 /*Downloaded fonts*/
 @font-face {
     font-family: Open Sans;     /*can rename if I want to*/
-    src: url(OpenSans-VariableFont_wdth\,wght.ttf);
+    src: url(fonts/OpenSans-VariableFont_wdth\,wght.ttf);
 }
 
 body {
@@ -39,6 +39,15 @@ body {
   letter-spacing: -.15rem;
   margin: .7rem 0 0;
   line-height: 1;
+  text-align: center;
+}
+.header-name1 {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -.15rem;
+  margin: .7rem 0 0;
+  line-height: 1;
+  text-align: center;
 }
 
 /*
@@ -301,4 +310,51 @@ p{  /*doesn't match with my website*/
   .wrapper {
     padding: 0 6px;
   }
+}
+
+#style-button {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: #efefef;
+  color: #333;
+  border-radius: 3px;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 0.7rem 0;
+  transition: all 0.2s;
+}
+#style-button:hover {
+  background: #333;
+  color: white;
+}
+
+/*=========================
+  Elements to be hidden (style2)
+  ========================= */
+
+.header-name2 {
+  display: none;
+}
+
+.logo {
+  display: none;
+}
+
+.p2 {
+    display: none;
+}
+
+.contact-links {
+    display: none;
+}
+
+.small-pictures {
+  display: none;
+}
+
+iframe {
+    display: none;
 }
