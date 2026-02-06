@@ -13,7 +13,8 @@
    ========================= */
 
 .page-header {
-  position: fixed;
+  position: sticky;
+top: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -25,7 +26,7 @@
 
 /* push page content down so header doesn't overlap */
 body {
-  padding-top: 64px;
+  padding-top: 0px;
 }
 
 /* =========================
@@ -84,7 +85,7 @@ body {
 
 #style-button {
   font-family: Oswald, "Work Sans";
-  position: fixed;
+  position: absolute;
   top: 0px;
   right: 10px;
   padding: 0.5rem 1.5rem;
@@ -179,6 +180,7 @@ body {
 .media-container {
   display: flex;
   gap: 20px;
+  flex-shrink: 0;
 }
 
 .small-pictures {
@@ -193,7 +195,7 @@ body {
 }
 
 /* =========================
-   New code (qualifications.html)
+   New code (remaining html pages)
    ========================= */
 
 .header-name {
@@ -214,6 +216,40 @@ body {
     margin: 1rem 0 1rem;
     line-height: 1.5;
     text-align: left;
+    flex: 1;
+}
+
+.resume-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.section-header h2 {
+  font-family: "Oswald", "Work Sans", "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 500;
+  letter-spacing: -.05rem;
+}
+
+.section-header h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -.05rem;
+}
+
+.stacked-media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 /* =========================
@@ -242,6 +278,6 @@ body {
   display: none;
 }
 
-.content-section {
+.style2-hide {
   display: none;
 }

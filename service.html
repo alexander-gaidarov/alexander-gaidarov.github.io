@@ -25,6 +25,27 @@
     <a href="" id="style-button">Switch Styles</a>
   </header>
 
+  <script>
+    const button = document.getElementById("style-button");
+  const theme = document.getElementById("page-style");
+
+  const styles = [
+    "style.css",
+    "style2.css"
+  ];
+
+  let current = localStorage.getItem("themeIndex") || 0;
+  theme.href = styles[current];
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();  // prevents navigation
+    current = (parseInt(current) + 1) % styles.length;
+
+    theme.href = styles[current];
+    localStorage.setItem("themeIndex", current);
+});
+  </script>
+
 <body>
   <div class="wrapper">
     
@@ -36,7 +57,8 @@
         <div class="resume-item-copy">Assisted in packing food boxes for local children in need at <a href="https://www.bvfb.org/?gad_source=1&gad_campaignid=304303364&gbraid=0AAAAADgMnmRx0tZuh02I0h0rqawauqQvx&gclid=Cj0KCQiAhOfLBhCCARIsAJPiopMqDv75TwgtkfPYeFfcMpxRAu_Hw3yl45eHqM_HfSArvQt048o_niAaApJ_EALw_wcB" target="_blank">Brazos Valley Food Bank</a></div>
         <div class="media-container">
           <img width="300" src="media/food-bank.png"></img>
-        </div> 
+        </div>
+      </div> 
 
       <div class="section-header"><h2 id="light-font">Aggie Replant</h2><h3 id="light-font">Fall 2024</h3></div>
       <div class="resume-item">
@@ -52,5 +74,7 @@
         <div class="media-container">
           <img width="400" src="media/bgSchool.jpg"></img>
         </div> 
-    </div>
+      </div>
     </section>
+  </div>
+</body>
