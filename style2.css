@@ -230,6 +230,8 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1.5px solid #000000;
 }
 
 .section-header h2 {
@@ -237,6 +239,7 @@ body {
   font-size: 1.85rem;
   font-weight: 500;
   letter-spacing: -.05rem;
+  margin-bottom: 0.2rem;
 }
 
 .section-header h3 {
@@ -244,6 +247,7 @@ body {
   font-weight: 500;
   font-style: italic;
   letter-spacing: -.05rem;
+  margin-bottom: 0.2rem;
 }
 
 .stacked-media {
