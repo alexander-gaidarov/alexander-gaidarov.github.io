@@ -43,6 +43,7 @@
 
     theme.href = styles[current];
     localStorage.setItem("themeIndex", current);
+    window.location.reload(); // Reloads the current page
 });
   </script>
 
@@ -52,30 +53,37 @@
     <h1 class="header-name">Projects</h1>
     
     <section class="content-section">
-      <div class="section-header"><h2 id="light-font">Chores Tracker</h2><h3 id="light-font">Aug 2024</h3></div>
+      <details open class="resume-dropdown">
+      <summary><div class="section-header"><h2 id="light-font">Chores Tracker</h2><h3 id="light-font">Aug 2024</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Designed a PCB for a custom circuit with two 2-bit counters and a debouncing circuit to track household chores indicated by LEDs that cycle through with button presses</div>
         <br>
         <div class="media-container">
           <video width="500" src="media/Chores_Tracker.mp4" type="video/mp4" controls muted></video>
         </div> 
-      </div><br>
+      </div>
+    </details><br>
 
-      <div class="section-header"><h2 id="light-font">Bulgarian Phonetic Transcription</h2><h3 id="light-font">Jan 2024</h3></div>
+    <details open class="resume-dropdown">  
+    <summary><div class="section-header"><h2 id="light-font">Bulgarian Phonetic Transcription</h2><h3 id="light-font">Jan 2024</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Created a GitHub repository (<a href="https://github.com/alexander-gaidarov/bulgarian-phonetic-transcription" target="_blank">bulgarian-phonetic-transcription</a>) that transcribes Bulgarian text into the International Phonetic Alphabet (IPA), helping linguists, speech therapists, and others with pronunciation of Cyrillic characters and Bulgarian words</div>
-      </div><br>
+      </div>
+    </details><br>
 
-      <div class="section-header"><h2 id="light-font">Language App</h2><h3 id="light-font">Jul 2023</h3></div>
+    <details open class="resume-dropdown"> 
+    <summary><div class="section-header"><h2 id="light-font">Language App</h2><h3 id="light-font">Jul 2023</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Created a GUI application using Java Swing that displays the conjugations and declensions of Russian and Bulgarian words gathered through web scraping </div>
         <br>
         <div class="media-container">
           <video width="500" src="media/Language_App.mp4" type="video/mp4" controls muted></video>
         </div>
-    </div> <br>
+    </div> 
+    </details> <br>
 
-    <div class="section-header"><h2 id="light-font">MAMA LED</h2><h3 id="light-font">May 2022</h3></div>
+    <details open class="resume-dropdown">
+    <summary><div class="section-header"><h2 id="light-font">MAMA LED</h2><h3 id="light-font">May 2022</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Designed and soldered a circuit consisting of two bistable multivibrators made from capacitors, resistors, and transistors that turns on 4 LEDs consecutively which light up the letters M, A, M, A</div>
         <br>
@@ -87,19 +95,24 @@
             <video width="500" src="media/MAMA_LED.mp4" type="video/mp4" controls muted></video>
           </div>
         </div>
-      </div> <br>
+      </div> 
+    </details><br>
 
-    <div class="section-header"><h2 id="light-font">Handwritten Font</h2><h3 id="light-font">Aug 2021</h3></div>
+    <details open class="resume-dropdown">
+    <summary><div class="section-header"><h2 id="light-font">Handwritten Font</h2><h3 id="light-font">Aug 2021</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Programmed a text-to-handwriting converter which outputs a printable document containing text that looks identical to my handwriting</div>
         <br>
       </div>
+    </details>
 
-      <div class="section-header"><h2 id="light-font">Alarm System</h2><h3 id="light-font">Jun 2021</h3></div>
+    <details open class="resume-dropdown"> 
+    <summary><div class="section-header"><h2 id="light-font">Alarm System</h2><h3 id="light-font">Jun 2021</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Constructed a room security system using an Arduino microcontroller that activates an alarm and sprays intruder with water when door is opened</div>
         <br>
       </div>
+    </details> 
 
     </section>
   </div>

@@ -9,7 +9,7 @@ body {
   color: #333;
   font-size: 16px;
   line-height: 1.5;
-  background: #fff;
+  background: #efefef;
   margin: 0;
 }
 
@@ -79,9 +79,10 @@ body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  background: #efefef;
+  background: rgb(192, 192, 192);
   color: #333;
-  border-radius: 3px;
+  border-radius: 2px;
+  border: 2px solid black;
   text-decoration: none;
   font-size: 1.4rem;
   margin: 0.7rem 0;
@@ -168,6 +169,7 @@ body {
 
 .resume-item {
   margin-bottom: 1.3rem;
+  display: block !important;
 }
 
 .resume-item-title {
@@ -318,9 +320,10 @@ p{  /*doesn't match with my website*/
   right: 30px;
   display: inline-block;
   padding: 0.5rem 1.5rem;
-  background: #efefef;
+  background: rgb(192, 192, 192);
   color: #333;
-  border-radius: 3px;
+  border-radius: 2px;
+  border: 2px solid black;
   text-decoration: none;
   font-size: 1.4rem;
   margin: 0.7rem 0;
@@ -357,4 +360,28 @@ p{  /*doesn't match with my website*/
 
 iframe {
     display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+
+/* disable clicking */
+.resume-dropdown > summary {
+  pointer-events: none;
+  cursor: default;
+}
+
+.resume-dropdown > .resume-item {
+  display: block !important;
+}
+
+/* This ensures the details-content is always visible even if "closed" */
+.resume-dropdown[details] > *:not(summary) {
+  display: block !important;
+}
+
+.resume-dropdown {
+  display: block !important;
 }

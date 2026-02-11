@@ -227,7 +227,7 @@ body {
 
 .section-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin-top: 3rem;
   margin-bottom: 1rem;
@@ -248,12 +248,45 @@ body {
   font-style: italic;
   letter-spacing: -.05rem;
   margin-bottom: 0.2rem;
+  margin-left: auto;
 }
 
 .stacked-media {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-header::before {
+  content: "▸";
+  font-size: 2rem;
+  transition: transform 0.2s;
+  margin-right: 10px;
+  padding-top: 1.5rem;
+}
+
+.resume-dropdown[open] .section-header::before {
+  content: "▾";
+  font-size: 2rem;
+  margin-right: 10px;
+  padding-top: 1.5rem;
+}
+
+.resume-dropdown[close] .resume-item {
+  display: none;
+}
+
+details {
+  
 }
 
 /* =========================
