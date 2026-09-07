@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Alexander Gaidarov - Projects</title>
-  <link id="page-style" rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="media/favicon.png" />
 </head>
 
@@ -18,34 +18,10 @@
           <a href="qualifications.html" id="resume"><li>Resume</li></a>
           <a href="portfolio.html"><li>Projects</li></a>
           <a href="service.html"><li>Service</li></a>
-          <a href="genai.html"><li>Surprise</li></a>
         </ul>
     </nav>
     </div>
-    <a href="" id="style-button">Switch Styles</a>
 </header>
-
-  <script>
-    const button = document.getElementById("style-button");
-  const theme = document.getElementById("page-style");
-
-  const styles = [
-    "style.css",
-    "style2.css"
-  ];
-
-  let current = localStorage.getItem("themeIndex") || 0;
-  theme.href = styles[current];
-
-  button.addEventListener("click", (e) => {
-    e.preventDefault();  // prevents navigation
-    current = (parseInt(current) + 1) % styles.length;
-
-    theme.href = styles[current];
-    localStorage.setItem("themeIndex", current);
-    window.location.reload(); // Reloads the current page
-});
-  </script>
 
 <body>
   <div class="wrapper">
@@ -53,8 +29,24 @@
     <h1 class="header-name">Projects</h1>
     
     <section class="content-section">
-      <details open class="resume-dropdown">
-      <summary><div class="section-header"><h2 id="light-font">Chores Tracker</h2><h3 id="light-font">Aug 2024</h3></div></summary>
+
+    <summary><div class="section-header"><h2 id="light-font">Senior Capstone: Weed Zapper</h2><h3 id="light-font">Current</h3></div></summary>
+      <div class="resume-item">
+        <div class="resume-item-copy">
+          Creating a hand-held device that uses a camera and machine learning to identify weeds in a garden and zap them with a high-voltage electrical charge, while leaving the surrounding plants unharmed
+        </div>
+        <br>
+      </div>
+
+    <summary><div class="section-header"><h2 id="light-font">Research: AnnoMath</h2><h3 id="light-font">Spring 2026</h3></div></summary>
+      <div class="resume-item">
+        <div class="resume-item-copy">
+          Utilized prompt engineering to contribute to the development of an AI-powered math tutoring system and facilitated a user study by preparing targeted math problems and obtaining professor feedback on the system
+        </div>
+        <br>
+      </div>
+
+    <summary><div class="section-header"><h2 id="light-font">Chores Tracker</h2><h3 id="light-font">Aug 2024</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Designed a PCB for a custom circuit with two 2-bit counters and a debouncing circuit to track household chores indicated by LEDs that cycle through with button presses</div>
         <br>
@@ -62,16 +54,14 @@
           <video width="500" src="media/Chores_Tracker.mp4" type="video/mp4" controls muted></video>
         </div> 
       </div>
-    </details><br>
+    <br>
 
-    <details open class="resume-dropdown">  
     <summary><div class="section-header"><h2 id="light-font">Bulgarian Phonetic Transcription</h2><h3 id="light-font">Jan 2024</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Created a GitHub repository (<a href="https://github.com/alexander-gaidarov/bulgarian-phonetic-transcription" target="_blank">bulgarian-phonetic-transcription</a>) that transcribes Bulgarian text into the International Phonetic Alphabet (IPA), helping linguists, speech therapists, and others with pronunciation of Cyrillic characters and Bulgarian words</div>
+        <br>
       </div>
-    </details><br>
 
-    <details open class="resume-dropdown"> 
     <summary><div class="section-header"><h2 id="light-font">Language App</h2><h3 id="light-font">Jul 2023</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Created a GUI application using Java Swing that displays the conjugations and declensions of Russian and Bulgarian words gathered through web scraping </div>
@@ -80,9 +70,8 @@
           <video width="500" src="media/Language_App.mp4" type="video/mp4" controls muted></video>
         </div>
     </div> 
-    </details> <br>
+    <br>
 
-    <details open class="resume-dropdown">
     <summary><div class="section-header"><h2 id="light-font">MAMA LED</h2><h3 id="light-font">May 2022</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Designed and soldered a circuit consisting of two bistable multivibrators made from capacitors, resistors, and transistors that turns on 4 LEDs consecutively which light up the letters M, A, M, A</div>
@@ -96,23 +85,19 @@
           </div>
         </div>
       </div> 
-    </details><br>
+    <br>
 
-    <details open class="resume-dropdown">
     <summary><div class="section-header"><h2 id="light-font">Handwritten Font</h2><h3 id="light-font">Aug 2021</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Programmed a text-to-handwriting converter which outputs a printable document containing text that looks identical to my handwriting</div>
         <br>
       </div>
-    </details>
 
-    <details open class="resume-dropdown"> 
     <summary><div class="section-header"><h2 id="light-font">Alarm System</h2><h3 id="light-font">Jun 2021</h3></div></summary>
       <div class="resume-item">
         <div class="resume-item-copy">Constructed a room security system using an Arduino microcontroller that activates an alarm and sprays intruder with water when door is opened</div>
         <br>
       </div>
-    </details> 
 
     </section>
   </div>
