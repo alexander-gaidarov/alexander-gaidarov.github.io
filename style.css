@@ -25,6 +25,14 @@ body {
   text-align: center;
 }
 
+.avatar {
+  width: 95px;
+  max-width: 100%;
+  border-radius: 100px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
 .header-name {
   font-size: 3rem;
   font-weight: 900;
@@ -41,6 +49,16 @@ body {
   line-height: 1;
   text-align: center;
 }
+
+/*
+.header-title {
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: -.05rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+*/
 
 .header-title {
       font-weight: 300;
@@ -180,49 +198,12 @@ body {
   padding-left: 1.2rem;
 }
 
-.course-list {
-  margin-left: 1.5rem;
-}
-
-.course-item {
-  border-bottom: 1px solid #c7c7c7;
-  padding: .65rem 0;
-}
-
-.course-item:last-child {
-  border-bottom: none;
-}
-
-.course-item summary {
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
-  color: #333;
-  font-size: 1.05rem;
-  list-style-position: outside;
-}
-
-.course-item summary::marker {
-  color: #333;
-}
-
-.course-item summary b {
-  flex: 1;
-}
-
-.course-item summary span {
-  font-family: "Lora", "Minion Pro", Palatino, Georgia, serif;
-  font-size: 1.0rem;
-  font-style: italic;
-  font-weight: 300;
-  white-space: nowrap;
-}
-
-.course-item .resume-item-list {
-  margin-top: .5rem;
-  margin-bottom: .25rem;
+.page-footer {
+  border-top: 4px solid #c7c7c7;
+  padding-top: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
 }
 
 #navbox{
@@ -323,20 +304,84 @@ p{  /*doesn't match with my website*/
     margin: 0 0 .5rem;
 }
 
+.footer-line {
+  font-size: .95rem;
+  color: #999;
+}
 @media (max-width: 800px) {
   .wrapper {
     padding: 0 6px;
   }
 }
 
+#style-button {
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background: rgb(192, 192, 192);
+  color: #333;
+  border-radius: 2px;
+  border: 2px solid black;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 0.7rem 0;
+  transition: all 0.2s;
+}
+#style-button:hover {
+  background: #333;
+  color: white;
+}
+
+/*=========================
+  Elements to be hidden (style2)
+  ========================= */
+
+.header-name2 {
+  display: none;
+}
+
 .logo {
   display: none;
+}
+
+.p2 {
+    display: none;
 }
 
 .contact-links {
     display: none;
 }
 
+.small-pictures {
+  display: none;
+}
+
+iframe {
+    display: none;
+}
+
 summary {
   list-style: none;
+}
+
+
+/* disable clicking */
+.resume-dropdown > summary {
+  pointer-events: none;
+  cursor: default;
+}
+
+.resume-dropdown > .resume-item {
+  display: block !important;
+}
+
+/* This ensures the details-content is always visible even if "closed" */
+.resume-dropdown[details] > *:not(summary) {
+  display: block !important;
+}
+
+.resume-dropdown {
+  display: block !important;
 }

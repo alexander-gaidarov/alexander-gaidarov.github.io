@@ -3,93 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <title>Alexander Gaidarov - Resume</title>
-  <link rel="stylesheet" href="style.css">
+  <link id="page-style" rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="media/favicon.png" />
 </head>
 
 <header class="page-header">
   <div id="navbox">
     <nav class="navbar">
+      <div class="logo">
+        <a href="https://tamu.edu" target="_blank"><image src="media/tamu.png" class="logo-image"></image></a>
+      </div>
         <ul>
           <a href="index.html"><li>Start</li></a>  
           <a href="qualifications.html" id="resume"><li>Resume</li></a>
           <a href="portfolio.html"><li>Projects</li></a>
           <a href="service.html"><li>Service</li></a>
+          <a href="genai.html"><li>Surprise</li></a>
         </ul>
     </nav>
     </div>
+    <a href="" id="style-button">Switch Styles</a>
 </header>
+
+  <script>
+    const button = document.getElementById("style-button");
+  const theme = document.getElementById("page-style");
+
+  const styles = [
+    "style.css",
+    "style2.css"
+  ];
+
+  let current = localStorage.getItem("themeIndex") || 0;
+  theme.href = styles[current];
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();  // prevents navigation
+    current = (parseInt(current) + 1) % styles.length;
+
+    theme.href = styles[current];
+    localStorage.setItem("themeIndex", current);
+});
+  </script>
+  
 
 <body>
   <div class="wrapper">
 
-    <h1 class="header-name">Resume</h1>
+      <h1 class="header-name">Resume</h1>
+  <br>  
+<div class="resume-item-copy">My primary technical interests lie at the intersection of embedded systems, digital hardware design, and software engineering, where low-level circuitry and high-level code work together to create efficient, real-world solutions. I am especially drawn to building systems that integrate hardware and software, such as microcontroller-based devices or full-stack tools, because they require both careful resource management and thoughtful user-focused design. This combination appeals to me because it challenges me to think holistically about performance, reliability, and usability rather than treating hardware and software as separate domains.</div>
+      <br>
 
+    <iframe src="Resume.pdf" width="100%" height="1050px" style="border: none;" title="Embedded PDF Viewer">
+    </iframe>
+
+    <div class="style2-hide">
     <section class="content-section">
       <div class="section-header"><h1>Education</h1></div>
       <div class="resume-item">
         <div class="resume-item-title">Texas A&amp;M University</div>
         <div class="resume-item-details">B.S. Computer Engineering &bull; May 2027</div>
         <ul class="resume-item-list">
-          <li>3.92 GPA &mdash; Dean's Honor Roll</li>
+          <li>4.0 GPA &mdash; Dean's Honor Roll</li>
           <li>Engineering Honors Program</li>
-          <li>Mathematics Minor</li>
         </ul>
       </div>
 
       <div class="resume-item">
         <div class="resume-item-details">Relevant Courses</div>
-        <div class="course-list">
-          <details class="course-item">
-            <summary><b>Hardware Design Verification</b><span>Fall 2026</span></summary>
-            <ul class="resume-item-list">
-              <li>SystemVerilog testbench design and object-oriented programming verification</li>
-              <li>Constrained Random Verification (CRV) and stimulus generation</li>
-              <li>SystemVerilog Assertions (SVA) and functional covergroups</li>
-              <li>Digital RTL verification using Cadence Xcelium and JasperGold</li>
+        <ul class="resume-item-list">
+              <li><b>Digital Integrated Circuit Design</b> (Fall 2025) — analysis and design of digital devices and integrated circuits, MOS and bipolar technologies, computer aided simulation</li>
+              <li><b>Microprocessor Systems Design</b> (Fall 2025) — 16/32-bit single board computer designs, memory board design, serial and parallel I/O interfacing, ROM, static and dynamic RAM circuits, assembly programming</li>          
+              <li><b>Computer Systems</b> (Fall 2025) — system support for programs on both single node and over network, OS interfaces, inter-process communication, system and network programming, computer security</li>
+              <li><b>Computer Architecture and Design</b> (Spring 2025) — register transfer languages, CPU organization, microprogramming, I/O and memory system architectures</li>
+              <li><b>Data Structures and Algorithms</b> (Spring 2025) — analysis of runtime and memory usage, abstract data types and their associated algorithms including stacks, queues, sorting and selection, searching, graphs, and hashing</li>
+              <li><b>Digital Systems Design</b> (Spring 2024) — combinational and sequential digital design, created practical circuits from gates and latches</li> 
             </ul>
-          </details>
-          <details class="course-item">
-            <summary><b>Advanced Computer Architecture</b><span>Fall 2026</span></summary>
-            <ul class="resume-item-list">
-              <li>Instruction-Level Parallelism (ILP), dynamic scheduling, and branch prediction</li>
-              <li>Multi-core memory systems, cache coherence protocols, and virtual memory</li>
-              <li>Simulated and benchmarked processor architectures using ChampSim</li>
-            </ul>
-          </details>
-          <details class="course-item">
-            <summary><b>Electronics</b><span>Spring 2026</span></summary>
-            <ul class="resume-item-list">
-              <li>Linear and nonlinear circuit analysis and design (AC and DC)</li>
-              <li>Worked with op-amps, diodes, BJTs, and MOSFETs on a breadboard</li>
-              <li>Modeled amplifiers, filters, and rectifiers in LTSpice and assembled them in lab</li>
-            </ul>
-          </details>
-          <details class="course-item">
-            <summary><b>Digital Integrated Circuit Design</b><span>Fall 2025</span></summary>
-            <ul class="resume-item-list">
-              <li>Analysis and design of digital devices and integrated circuits</li>
-              <li>CMOS transistor-level logic design, parasitic extraction, power optimization</li>
-              <li>Computer-aided simulation: Cadence Virtuoso and Spectre</li>
-            </ul>
-          </details>
-          <details class="course-item">
-            <summary><b>Computer Systems</b><span>Fall 2025</span></summary>
-            <ul class="resume-item-list">
-              <li>Linux scripting and interfacing</li>
-              <li>Multithreading, inter-process communication (FIFOs, Unix sockets, shared memory)</li>
-              <li>TCP/IP sockets, computer security and encryption</li>
-            </ul>
-          </details>
-          <details class="course-item">
-            <summary><b>Data Structures and Algorithms</b><span>Spring 2025</span></summary>
-            <ul class="resume-item-list">
-              <li>Analysis of runtime and memory usage</li>
-              <li>Abstract data types and their associated algorithms</li>
-              <li>Stacks, queues, graphs, hashing, sorting, selection, and searching</li>
-            </ul>
-          </details>
-        </div>
       </div>
     </section>
 
@@ -97,24 +87,17 @@
     <section class="content-section">
       <div class="section-header"><h1>Experience</h1></div>
       <div class="resume-item">
-        <div class="resume-item-title">Weatherford</a></div>
-        <div class="resume-item-details">Manufacturing Intern &bull; Jun 2026&nbsp;&mdash;&nbsp;Aug 2026</div>
-        <ul class="resume-item-list">
-          <li>Wrote a troubleshooting guide with accompanying Python scripts for assembled PCBs that failed production testing, improving consistency and efficiency in technician diagnosis</li>
-          <li>Analyzed electrical schematics and individual components to identify root causes of board-level failures</li>
-          <li>Used ESD-safe practices while performing hands-on debugging and high-temp soldering</li>
-        </ul><br>
-
-      <div class="resume-item-details">Information Technology Intern &bull; Jun 2025&nbsp;&mdash;&nbsp;Aug 2025</div>
+        <div class="resume-item-title"><a href="https://weatherford.com" target="_blank">Weatherford</a></div>
+        <div class="resume-item-details">Information Technology Intern &bull; Jun 2025&nbsp;&mdash;&nbsp;Aug 2025</div>
         <ul class="resume-item-list">
           <li>Created an application that displays outages and maintenance across all company locations</li>
           <li>App distributed to entire company, providing visibility to 10,000+ employees regarding network status</li>
           <li>Full-stack app development with automated real-time data delivery using Microsoft Power Platform</li>
         </ul>
-      </div><br>
+      </div>
 
       <div class="resume-item">
-        <div class="resume-item-title">Austin Community College</a></div>
+        <div class="resume-item-title"><a href="https://www.austincc.edu/" target="_blank">Austin Community College</a></div>
         <div class="resume-item-details">Russian Supplemental Instruction Leader &bull; Jan 2023&nbsp;&mdash;&nbsp;May 2025</div>
         <ul class="resume-item-list">
           <li>Helped college students learning Russian by holding study-group sessions proven to improve course completion rate by 11% and average grade by 0.5</li>
@@ -122,42 +105,38 @@
           <li>Assisted professor during lectures by managing up to 10 students at a time on Zoom</li>
         </ul>
       </div>
+
+      <div class="resume-item">
+        <div class="resume-item-title"><a href="https://www.aggiescreate.com/" target="_blank">Aggies Create</a></div>
+        <div class="resume-item-details">Chief Embedded Systems Engineer &bull; Sep 2024&nbsp;&mdash;&nbsp;Dec 2024</div>
+        <div class="resume-item-copy">Designed electronics and firmware for a portable writing aid for disabled students</div>
+      </div>
     </section>
 
 
     <section class="content-section">
       <div class="section-header"><h1>Skills</h1></div>
       <div class="resume-item">
-        <h4 class="resume-item-details">Hardware</h4>
-          <ul class="resume-item-list">
-            <li>Hardware design tools: Verilog, ARM assembly, Cadence Virtuoso and Spectre, Xilinx Vivado</li> 
-            <li>PCB design (EasyEDA, KiCad), hardware verification (Cadence Xcelium and JasperGold)</li>
-            <li>Computer architecture (ChampSim) and analog (LTSpice) simulation</li>
-            <li>Reading and drawing electrical schematics, breadboard prototyping, soldering</li>
-            <li>Multimeter and oscilloscope analysis and troubleshooting, power supply experience</li>  
-            <li>Experience with microcontrollers (Arduino, Raspberry Pi) and FPGAs (ZYBO Z7)</li> 
-          </ul>
-        </div>
+          <h4 class="resume-item-details">Hardware</h4>
+          <p class="resume-item-copy"></p><ul class="resume-item-list"><li>Hardware design, debugging, and verification in Verilog</li> <li>Breadboard prototyping, soldering, and PCB design</li> <li>Analysis with multimeters and oscilloscopes</li> <li>Proficient in reading and creating electrical schematics</li> <li>Experience with microcontrollers (Arduino, Raspberry Pi) and embedded systems</li> <li>Software: Cadence, Vivado, LTspice, and KiCad</li><p></p>
+        </ul></div>
 
       <div class="resume-item">
-        <h4 class="resume-item-details">Software</h4>
-          <ul class="resume-item-list">
-            <li>Programming and Web Development: Java, Python, C++, C, HTML, and CSS</li> 
-            <li>Databases: SQL and RDBMS (Relational Database Management System)</li> 
-            <li>AI tools and agents: Cursor AI, GitHub Copilot, Grok, LLMs</li>
-            <li>Windows and Linux scripting experience, as well as Git version control</li> 
-            <li>Microsoft Power Platform (Power Apps, Power Automate Flows, SharePoint, Dataverse)</li>
-          </ul>
-        </div>
+          <h4 class="resume-item-details">Software</h4>
+          <p class="resume-item-copy"></p><ul class="resume-item-list"><li>Programming: Java, Python, C++, ARM assembly</li> <li>Web Development: HTML and CSS</li> <li>Databases: SQL and RDBMS (Relational Database Management System)</li> <li>Familiarity with Windows and Linux operating systems, as well as Git</li> <li>Microsoft Power Platform (Power Apps, Power Automate Flows, SharePoint, Dataverse)</li><p></p>
+        </ul></div>
 
       <div class="resume-item">
-        <h4 class="resume-item-details">General</h4>
-          <ul class="resume-item-list">
-            <li>Fluent in English, Bulgarian, and Russian</li> 
-            <li>Microsoft Word, PowerPoint, and Excel (PivotTables, LOOKUP, SUMIF)</li> 
-            <li>Leadership and teaching experience</li>
-          </ul>
-        </div>
+          <h4 class="resume-item-details">General</h4>
+          <p class="resume-item-copy"></p><ul class="resume-item-list"><li>Fluent in English, Bulgarian, and Russian</li> <li>Microsoft Word, PowerPoint, and Excel (PivotTables, LOOKUP, SUMIF)</li> <li>Leadership and teaching experience</li><p></p>
+        </ul></div>
     </section>
+    </div>
+
+    <div class="resume-item-copy">In hardware design and embedded systems, I have hands-on experience with hardware design, debugging, and verification using tools such as Verilog and Cadence. I have prototyped circuits on breadboards, soldered PCBs, and utilized oscilloscopes and multimeters to diagnose and refine hardware behavior. I am proficient with embedded platforms like Arduino and Raspberry Pi and competent in reading and generating electrical schematics. These skills were especially valuable in projects such as the Chores Tracker and MAMA LED circuits, as well as my leadership role designing assistive hardware with Aggies Create.
+      <br><br>
+On the software engineering side, I am experienced in multiple programming languages including Java, Python, C++, and ARM assembly. I have developed desktop applications with Java Swing, automated transcription utilities, and full-stack tools as part of internship work. I am also comfortable with web technologies such as HTML/CSS and fundamental database concepts using SQL and relational systems. I regularly interact with both Windows and Linux environments and manage source code using Git. Additionally, I have applied Microsoft Power Platform tools—including Power Apps, Power Automate, SharePoint, and Dataverse—to deliver enterprise-grade solutions during industry internships.</div>
+    <br><br>
+  </div>
 </body>
 </html>

@@ -1,0 +1,320 @@
+/*Downloaded fonts*/
+@font-face {
+    font-family: Work Sans;     /*can rename if I want to*/
+    src: url(fonts/WorkSans-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: Oswald;
+    src: url(fonts/Oswald-VariableFont_wght.ttf);
+}
+
+/* =========================
+   Header Container
+   ========================= */
+
+.page-header {
+  position: sticky;
+top: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background: #500000;
+  z-index: 1000;
+  border-bottom: black 5px solid;
+}
+
+/* push page content down so header doesn't overlap */
+body {
+  padding-top: 0px;
+}
+
+/* =========================
+   Nav Layout
+   ========================= */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  padding-right: 0px;
+}
+
+.navbar ul {
+  display: flex;
+  overflow: hidden;
+  max-width: 800px;   /* large enough to fit links */
+  opacity: 1;
+  padding-right: 00px;
+
+}
+
+/* =========================
+   Link Styling
+   ========================= */
+
+.navbar li {
+  list-style: none;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.navbar a {
+  display: block;
+  padding: 0 16px;
+  line-height: 64px;
+
+  font-family:'Work Sans', 'Open Sans';
+  font-size: 1.4rem;
+  font-weight: 500;
+
+  color: white;
+  text-decoration: none;
+}
+
+.navbar li:hover{
+  background: white;
+  color: black;
+  font-weight: 700;
+}
+
+#style-button {
+  font-family: Oswald, "Work Sans";
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  padding: 0.5rem 1.5rem;
+  background: #500000;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0.7rem 0;
+  transition: all 0.2s;
+  align-content: center;
+}
+#style-button:hover {
+  background: #333;
+}
+
+
+/* =========================
+   Mobile
+   ========================= */
+
+@media (max-width: 600px) {
+  .nav-links {
+    max-width: none;
+    opacity: 1;
+    flex-wrap: wrap;
+  }
+
+  .nav:hover .nav-links {
+    max-width: none;
+  }
+}
+
+/* =========================
+   New code (index.html)
+   ========================= */
+
+.header-name2 {
+  font-family: Oswald, "Work Sans";
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0rem;
+  margin: 1rem 0 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.p2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: -.05rem;
+    margin: 2rem 0 2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.header-contact-info {
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.contact-button {
+  font-family: Oswald, "Work Sans";
+  padding: 0.5rem 1.5rem;
+  background: #500000;
+  color: white;
+  border-radius: 3px;
+  border: 3px solid black;
+  text-decoration: none;
+  font-size: 1.7rem;
+  margin: 0.7rem 0;
+  transition: all 0.2s;
+  align-content: center;
+}
+
+.contact-button:hover {
+  background: #333;
+  color: #fff;
+}
+
+.contact-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.contact-links a {
+    margin: 0 0.4rem;
+}
+
+.media-container {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.small-pictures {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.small-pictures img {
+    width: 300px;
+    border: 2px solid black;
+}
+
+/* =========================
+   New code (remaining html pages)
+   ========================= */
+
+.header-name {
+  font-family: Oswald, "Work Sans";
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0rem;
+  margin-top: 3rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.resume-item-copy {
+    font-family: "Work Sans", "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: -.05rem;
+    margin: 1rem 0 1rem;
+    line-height: 1.5;
+    text-align: left;
+    flex: 1;
+}
+
+.resume-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  border-bottom: 1.5px solid #000000;
+}
+
+.section-header h2 {
+  font-family: "Oswald", "Work Sans", "Open Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.85rem;
+  font-weight: 500;
+  letter-spacing: -.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.section-header h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: -.05rem;
+  margin-bottom: 0.2rem;
+  margin-left: auto;
+}
+
+.stacked-media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.section-header::before {
+  content: "▸";
+  font-size: 2rem;
+  transition: transform 0.2s;
+  margin-right: 10px;
+  padding-top: 1.5rem;
+}
+
+.resume-dropdown[open] .section-header::before {
+  content: "▾";
+  font-size: 2rem;
+  margin-right: 10px;
+  padding-top: 1.5rem;
+}
+
+.resume-dropdown[close] .resume-item {
+  display: none;
+}
+
+details {
+  
+}
+
+/* =========================
+   Reused code
+   ========================= */
+.wrapper {
+    max-width: 828px;
+    padding: 0 24px;
+    margin: 0 auto;
+    zoom: 1;
+}
+
+/*=========================
+  Elements to be hidden (style2)
+  ========================= */
+
+.header-name1 {
+  display: none;
+}
+
+.title-bar {
+  display: none;
+}
+
+.p1 {
+  display: none;
+}
+
+.style2-hide {
+  display: none;
+}

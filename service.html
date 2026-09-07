@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Alexander Gaidarov - Service</title>
-  <link rel="stylesheet" href="style.css">
+  <link id="page-style" rel="stylesheet" href="style.css">
   <link rel="icon" type="image/x-icon" href="media/favicon.png" />
 </head>
 
@@ -18,55 +18,71 @@
           <a href="qualifications.html" id="resume"><li>Resume</li></a>
           <a href="portfolio.html"><li>Projects</li></a>
           <a href="service.html"><li>Service</li></a>
+          <a href="genai.html"><li>Surprise</li></a>
         </ul>
     </nav>
     </div>
+    <a href="" id="style-button">Switch Styles</a>
   </header>
+
+  <script>
+    const button = document.getElementById("style-button");
+  const theme = document.getElementById("page-style");
+
+  const styles = [
+    "style.css",
+    "style2.css"
+  ];
+
+  let current = localStorage.getItem("themeIndex") || 0;
+  theme.href = styles[current];
+
+  button.addEventListener("click", (e) => {
+    e.preventDefault();  // prevents navigation
+    current = (parseInt(current) + 1) % styles.length;
+
+    theme.href = styles[current];
+    localStorage.setItem("themeIndex", current);
+    window.location.reload(); // Reloads the current page
+});
+  </script>
 
 <body>
   <div class="wrapper">
     
-    <h1 class="header-name">Service</h1>
+      <h1 class="header-name">Service</h1>
 
+    
     <section class="content-section">
-      
-      <summary><div class="section-header"><h2 id="light-font">Texas A&M Student Semiconductor Summit</h2><h3 id="light-font">Current</h3></div></summary>
-      <div class="resume-item">
-        <div class="resume-item-copy">Member of the organizing committe focused on corporate outreach for the Texas A&M Student Semiconductor Summit, establishing key industry partnerships to secure corporate attendance, sponsorships, and guest speakers</a></div>
-        <br>
-      </div>
-      
-      <summary><div class="section-header"><h2 id="light-font">Retirement Home</h2><h3 id="light-font">Current</h3></div></summary>
-      <div class="resume-item">
-        <div class="resume-item-copy">Engaged with elderly residents at a 12 Oaks Senior Living home to foster meaningful social connection, reduce isolation, and support emotional well-being through weekly visits and companionship</a></div>
-        <div class="media-container">
-          <img width="300" src="media\12-Oaks-Logo-600x400-1.jpg"></img>
-        </div>
-      </div>
-
+      <details open class="resume-dropdown">
       <summary><div class="section-header"><h2 id="light-font">Food Bank</h2><h3 id="light-font">Spring 2026</h3></div></summary>
       <div class="resume-item">
-        <div class="resume-item-copy">Assisted in packing food boxes for local children in need at Brazos Valley Food Bank</a></div>
+        <div class="resume-item-copy">Assisted in packing food boxes for local children in need at <a href="https://www.bvfb.org/?gad_source=1&gad_campaignid=304303364&gbraid=0AAAAADgMnmRx0tZuh02I0h0rqawauqQvx&gclid=Cj0KCQiAhOfLBhCCARIsAJPiopMqDv75TwgtkfPYeFfcMpxRAu_Hw3yl45eHqM_HfSArvQt048o_niAaApJ_EALw_wcB" target="_blank">Brazos Valley Food Bank</a></div>
         <div class="media-container">
           <img width="300" src="media/food-bank.png"></img>
         </div>
       </div> 
+      </details>
 
+      <details open class="resume-dropdown">
       <summary><div class="section-header"><h2 id="light-font">Aggie Replant</h2><h3 id="light-font">Fall 2024</h3></div></summary>
       <div class="resume-item">
-        <div class="resume-item-copy">Contributed to the planning and organization of Replant Day, when students plan thousands of saplings in the Bryan-College Station Area </div>
+        <div class="resume-item-copy">Contributed to the planning and organization of Replant Day, when students plan thousands of saplings in the Bryan-College Station Area (<a href="https://replant.tamu.edu/" target="_blank">read more</a>) </div>
         <div class="media-container">
           <img width="300" src="media/replant.png"></img>
         </div> 
       </div>
+      </details>
 
+      <details open class="resume-dropdown">
       <summary><div class="section-header"><h2 id="light-font">Bulgarian School</h2><h3 id="light-font">Mar 2022 — May 2023</h3></div></summary>
       <div class="resume-item">
-        <div class="resume-item-copy">Volunteered as an assistant teacher at the Bulgarian school in Austin, supporting students of different ages and skill levels with Bulgarian language learning and occasional math instruction in a dynamic, mixed-ability classroom </div>
+        <div class="resume-item-copy">Volunteered as an assistant teacher at the Bulgarian school in Austin, supporting students of different ages and skill levels with Bulgarian language learning and occasional math instruction in a dynamic, mixed-ability classroom (<a href="https://www.facebook.com/bgschoolaustin/" target="_blank">read more</a>) </div>
         <div class="media-container">
           <img width="400" src="media/bgSchool.jpg"></img>
         </div> 
       </div>
+    </details>
     </section>
   </div>
 </body>
